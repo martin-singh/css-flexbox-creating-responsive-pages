@@ -43,8 +43,9 @@ nav>ul>li a {
 /*Side Menu*/
 
 .mainContent ul{
-    padding-inline-start: 2px;
-    margin-right: 1.5rem;
+    /*padding-inline-start: 0;
+    margin-right: 0;*/
+    padding: .7rem;
 }
 
 .mainContent ul>a>li{
@@ -67,32 +68,88 @@ nav>ul>li a {
 }
 
 .mainContent{
-    width:1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.leftmenu {
-    float: left;
-    width: 30%;
-    margin-bottom: 20px;
+    margin: 0 auto; /* top/bottom right/left */ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 /*Main Content*/
-
-.main {
-    float: right;
-    width: 70%;
-    margin-bottom: 20px;
-}
-
 .pageTitle{
     font-size:35px;
     color:#a593c2;
 }
 
+.box { /* for testing only */
+    margin: 5px 10px;
+    width: 200px;
+    height: 100px;
+    background-color: tomato;
+    color: white;
+    text-align: center;
+}
+
+.leftMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.pieRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.pieGallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 60%;
+}
+
+.pieCard {
+    display: flex;
+    flex-direction: column;
+    margin: .4rem;
+    padding: .4rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+}
+.pieCard > h5,
+.pieCard > p {
+    margin: .2rem 0;
+}
+
+.cardRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardRow > h5,
+.cardRow > p {
+    margin: .2rem 0;
+}
+
 /*Footer*/
 footer {
-    clear: both;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer > p,
+footer > address {
+    margin: 0.5rem 0;
 }
